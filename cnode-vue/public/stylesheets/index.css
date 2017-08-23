@@ -1,0 +1,128 @@
+/* nav style */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:40px;
+    background-color: #80BD01;
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+}
+nav img{
+    width:30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 15px;
+    position: absolute;
+    top: 5px;;
+    left: 7px;
+}
+nav span{
+    display: inline-block;
+    width:40px;
+    height: 40px;
+    position: absolute;
+    top: 2px;;
+    right: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2174D9;
+}
+/* body style */
+#appBody{
+    margin-top: 40px; 
+}
+.topic-component{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    margin-top: 2px;
+}
+.topic-component img{
+    width:40px;
+    height:40px;
+    border-radius: 3px;
+}
+.topic-component a{
+    margin-top: 1px;
+    display: inline-block;
+    position: relative;
+    top: -9px;
+    left: 0;
+    z-index: -1;
+}
+.topic-component div{
+    display: inline-block;
+    position: relative;
+    bottom: -13px;
+    left: -60px;
+    z-index: -1;
+}
+.topic-component div .createBefore{
+    margin-left:20px; 
+}
+.reAndVist{
+    margin-left:20px; 
+}
+.topic-component .tabs{
+    display: inline-block;
+    width: 27px;
+    height: 15px;
+    color: white;
+    /* background-color: #80BD00; */
+    border-radius: 2px;
+    font-size: 10px;
+    text-align: center;
+}
+.tabs-good{
+    background-color: #80BD00;
+}
+.tabs-top{
+    background-color: #80BD00;
+}
+.tabs-share{
+    background-color: #666666
+}
+
+/* footer style */
+.footer {
+    background-color: #80BD01;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+}
+.footer ul{
+    list-style: none;
+    border:none;
+    background-color: none;
+    margin:0;
+    width:100%;
+    height: 40px;
+    padding: 0;
+    text-align: center;
+}
+.footer li{
+    display: inline;
+    height: 40px;
+}
+.footer li a{
+    display:inline-block; 
+    padding:0; 
+    height:40px;
+    width: 17%; 
+    line-height:40px;
+    text-decoration: none;
+}
+.footer li a:active{
+    color: white;
+}
+.footer li a:hover{
+    color: white;
+    cursor: pointer;
+}
