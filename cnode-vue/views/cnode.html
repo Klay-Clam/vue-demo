@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="https://raw.githubusercontent.com/Klay-Clam/Tank/master/public/images/logo.png" type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/stylesheets/index.css">
+    <script type="text/javascript" src="../node_modules/vue/dist/vue.min.js"></script>
+    <script type="text/javascript" src="../node_modules/axios/dist/axios.min.js"></script>
+    <title>CNODE-VUE</title>
+</head>
+
+<body>
+    <nav>
+        <!-- 用户头像 ， 为用户头像添加点击事件，点击事件触发时，右滑显示点击事件 -->
+        <img src="https://raw.githubusercontent.com/Klay-Clam/Tank/master/public/images/logo.png" alt="Klay-Clam" @click="userInfo(username)">
+        <span id="newTopic">+</span>
+    </nav>
+    <div id="appBody">
+        <div class="topic-component" v-for="topic in topics">
+            <img src="https://avatars3.githubusercontent.com/u/24789217?v=4&s=120" alt="MinChangGh" title="MinChangGh">
+            <a href="">{{topic.title}}</a>
+            <div>
+                <span class="tabs tabs-share">{{topic.good}}</span>
+                <span class="createBefore">{{topic.create_at}}</span>
+                <span class="reAndVist">{{topic.reply_count}}//{{topic.visit_count}}</span>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li><a>全部</a></li>
+            <li><a>精华</a></li>
+            <li><a>分享</a></li>
+            <li><a>问答</a></li>
+            <li><a>招聘</a></li>
+        </ul>
+        <!-- /.container-fluid -->
+    </footer>
+    <script>
+        let app = new Vue({
+            el: "#appBody",
+            data:{
+                topics:[]
+            },
+            created(){
+                
+            },
+            mounted(){
+                axios.get('https://cnodejs.org/api/v1/topics')
+                        .then(response => {
+                            console.log(response);
+                            console.log(response.data.data.length);
+                            this.topics = response.data.data;
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>
