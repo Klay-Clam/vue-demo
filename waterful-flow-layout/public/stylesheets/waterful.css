@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    /*position: relative;*/
+
+    /*多栏布局*/
+    /*column-width: 202px;*/
+}
+.box{
+    /* 内边距 top right bottom left */
+    padding: 15px 7px 0 7px;
+    float: left;
+}
+.pic{
+    border: 1px solid #dddddd;
+}
+
+.pic img{
+    width:165px;
+    padding:10px;
+}
