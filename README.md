@@ -8,4 +8,4 @@
 
 > cnode-vue演示地址：
 
-<a href="https://klay-clam.github.io/vue-demo/cnode-vue/views/index.html">https://klay-clam.github.io/vue-demo/cnode-vue/views/index.html</a>
+<a href="https://klay-clam.github.io/vue-demo/cnode-vue/views/index.html">https://klay-clam.github.io/vue-demo/cnode-vue/views/cnode.html</a>
